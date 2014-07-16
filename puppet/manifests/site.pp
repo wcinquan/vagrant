@@ -1,3 +1,3 @@
 node 'broken.box.local' {
-	include instance_taketwo::vhost
+	include instance_taketwo
 }
