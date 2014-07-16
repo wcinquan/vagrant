@@ -1,4 +1,4 @@
-class instance_taketwo::vhost (
+class instance_taketwo (
 	$document_root = '/var/www/html',
 	$server_name = 'broken.box.local',
 	$port = '80',
