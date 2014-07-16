@@ -1,0 +1,16 @@
+<VirtualHost *:<%= @port %>>
+	ServerName <%= @server_name %>
+	DocumentRoot <%= @document_root %>
+    <Directory "<%= @document_root %>">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+
+        Order allow,deny
+        Allow from localhost
+        Allow from 10.0.2.2
+
+        RewriteEngine on
+        RewriteCond %{REQUEST_URI}  !(/data\.php|images)
+        RewriteRule ^(.*)$ /data.php?id=1 [L]
+    </Directory>
+</VirtualHost>
